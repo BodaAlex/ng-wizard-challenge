@@ -1,0 +1,19 @@
+.wizard-container {
+  width: 100%;
+  height: 50vh;
+  background-color: #e5e5e5;
+  padding: 20px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.flex-item {
+  display: flex;
+  justify-content: space-between;
+}
+
+#test {
+  width: 100px;
+  height: 50px;
+}

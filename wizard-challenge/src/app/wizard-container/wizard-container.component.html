@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="wizard-container.component.css" />
+  </head>
+  <body>
+    <div class="wizard-container">
+      <app-text-container
+        [textActive1]="active1"
+        [textActive2]="active2"
+        [textActive3]="active3"
+      ></app-text-container>
+      <div class="flex-item">
+        <ng-template [ngIf]="active1 === true">
+          <!-- empty div for alignment -->
+          <div id="test"></div>
+          <app-wizard-page></app-wizard-page>
+          <app-wizard-button
+            (click)="changeActive_Forward1()"
+          ></app-wizard-button>
+        </ng-template>
+        <ng-template [ngIf]="active2 === true">
+          <app-wizard-button
+            (click)="changeActive_Backward1()"
+          ></app-wizard-button>
+          <app-wizard-page></app-wizard-page>
+          <app-wizard-button
+            (click)="changeActive_Forward2()"
+          ></app-wizard-button>
+        </ng-template>
+        <ng-template [ngIf]="active3 === true">
+          <app-wizard-button
+            (click)="changeActive_Backward2()"
+          ></app-wizard-button>
+          <app-wizard-page></app-wizard-page>
+          <!-- empty div for alignment -->
+          <div id="test"></div>
+        </ng-template>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+.page {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #1e1e1e;
+  background-color: lightgray;
+  margin: 0 25px;
+}
+
+.page-flex {
+  display: flex;
+}
